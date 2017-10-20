@@ -9,11 +9,7 @@ Page({
     draft: '',
     editDraft: null,
   },
-  login: function() {
-    return AV.Promise.resolve(AV.User.current()).then(user =>
-      user ? (user.isAuthenticated().then(authed => authed ? user : null)) : null
-    ).then(user => user ? user : AV.User.loginWithWeapp());
-  },
+  
   fetchTodos: function (user) {
     console.log('uid', user.id);
     const query = new AV.Query(Todo)
@@ -28,7 +24,7 @@ Page({
   },
   onReady: function() {
     console.log('page ready');
-    this.login().then(this.fetchTodos.bind(this)).catch(error => consolo.error(error.message));
+
   },
   onUnload: function() {
     this.subscription.unsubscribe();
