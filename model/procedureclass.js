@@ -5,12 +5,9 @@ module.exports = [
   "afamily": ['个体工农商户','电商服务点','工农商企业'],
   "pSuccess": [
     {inclose:true, gname:"indType", p:'主营业务', t:"industrytype", apdclist:require('./apd1.js'), apdvalue:[0, 0, 0] },
-    {gname:"nick", p:'单位简称',t:"h3" },
-    {gname: "title", p: '单位简介', t: "p"},
-    {gname: "desc", p: '单位描述', t: "p"},
-    {gname: "thumbnail", p: '图片简介', t: "thumb" },
-    {gname: "aGeoPoint", p: '选择地理位置', t: "chooseAd" },
-    {gname: "address", p: '详细地址', t: "ed"},
+
+    {gname: "aGeoPoint", p: '流动负债', t: "d2" },
+    {gname: "address", p: '注册地', t: "ed"},
     {gname: "licenseNumber", p:'社会信用代码', t: "h3" }
   ],
   "puRoles": [],
@@ -27,8 +24,8 @@ module.exports = [
   "afamily": ['个体工农商户','电商服务点','工农商企业'],
   "pSuccess": [
     {inclose:true, gname:"indType", p:'主营业务', t:"industrytype", apdclist:require('./apd1.js'), apdvalue:[0, 0, 0] },
-    {gname:"nick", p:'单位简称',t:"h3" },
-    {gname: "title", p: '单位简介', t: "p"},
+    {gname:"nick", p:'单位简称',t:"d2" },
+    {gname: "title", p: '单位简介', t: "d2"},
     {gname: "desc", p: '单位描述', t: "p"},
     {gname: "thumbnail", p: '图片简介', t: "thumb" },
     {gname: "aGeoPoint", p: '选择地理位置', t: "chooseAd" },
@@ -45,14 +42,17 @@ module.exports = [
 },
 {
   "pNo": 2,
-  "pName": "文章",
-  "afamily": ['信息共享','品牌建设','政策扶持','单位宣传','帮助问答'],
+  "pName": "资产负债表",
   "pSuccess": [
-    {gname:"uName", t:"h1", p:"名称" },
-    {gname:"title",t:"h2", p:"标题" },
-    {gname:"desc", t:"ap", p:"摘要" },
-    {gname:"thumbnail", p: '上传用于缩略图的图片',t: "thumb" },
-    {gname:"details", p:'详情',t:"eDetail" }
+    {gname:"reportPeriod", p:'报告期',t:"sq"},
+    {gname:"currentAssets ", p:'流动资产',t:"d2" },
+    {gname: "longInvestment ", p: '长期投资', t: "d2"},
+    {gname: "fixedAssets ", p: '固定资产', t: "d2"},
+    {gname: "intangibleAndOtherAssets ", p: '无形资产及其他资产', t: "d2" },
+    {gname:"deferredTaxAssets ", p:'递延税款借项',t:"d2" },
+    {gname: "currentLiabilities ", p: '流动负债', t: "d2" },
+    {gname: "longLiabilities ", p: '长期负债', t: "d2" },
+    {gname:"deferredTaxCredits ", p:'递延税款贷项',t:"d2" }
   ],
   "puRoles": [
     "20",
@@ -63,7 +63,7 @@ module.exports = [
     "21",
     "20"
   ],
-  "pModle": "articles"
+  "pModle": "quarterlyReports"
 },
 {
   "pNo": 3,
