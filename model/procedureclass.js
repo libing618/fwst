@@ -45,14 +45,18 @@ module.exports = [
   "pName": "资产负债表",
   "pSuccess": [
     {gname:"reportPeriod", p:'报告期',t:"sq"},
-    {gname:"currentAssets ", p:'流动资产',t:"d2" },
-    {gname: "longInvestment ", p: '长期投资', t: "d2"},
-    {gname: "fixedAssets ", p: '固定资产', t: "d2"},
-    {gname: "intangibleAndOtherAssets ", p: '无形资产及其他资产', t: "d2" },
-    {gname:"deferredTaxAssets ", p:'递延税款借项',t:"d2" },
-    {gname: "currentLiabilities ", p: '流动负债', t: "d2" },
-    {gname: "longLiabilities ", p: '长期负债', t: "d2" },
-    {gname:"deferredTaxCredits ", p:'递延税款贷项',t:"d2" }
+    {gname:"a1 ", p:'流动资产',t:"d2" },
+    {gname: "a2", p: '长期投资', t: "d2"},
+    {gname: "a3", p: '固定资产', t: "d2"},
+    {gname: "a4", p: '无形资产及其他资产', t: "d2" },
+    {gname:"a5", p:'递延税款借项',t:"d2" },
+    {gname: "l1 ", p: '流动负债', t: "d2" },
+    {gname: "l2", p: '长期负债', t: "d2" },
+    {gname:"l3", p:'递延税款贷项',t:"d2" },
+    {gname:"c1", p:'实收资本净额',t:"d2" },
+    {gname: "c2", p: '资本公积', t: "d2" },
+    {gname: "c3", p: '盈余公积', t: "d2" },
+    {gname:"c4", p:'未分配利润',t:"d2" }
   ],
   "puRoles": [
     "20",
