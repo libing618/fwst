@@ -5,8 +5,9 @@ module.exports = [
   "afamily": ['个体工农商户','电商服务点','工农商企业'],
   "pSuccess": [
     {inclose:true, gname:"indType", p:'主营业务', t:"industrytype", apdclist:require('./apd1.js'), apdvalue:[0, 0, 0] },
-
-    {gname: "aGeoPoint", p: '流动负债', t: "d2" },
+    {gname:"uName", p:'单位简称',t:"d2" },
+    {gname: "nick", p: '单位简介', t: "d2"},
+    {gname: "thumbnail", p: '图片简介', t: "thumb" },
     {gname: "address", p: '注册地', t: "ed"},
     {gname: "licenseNumber", p:'社会信用代码', t: "h3" }
   ],
@@ -20,15 +21,10 @@ module.exports = [
 },
 {
   "pNo": 1,
-  "pName": "单位名称和负责人",
-  "afamily": ['个体工农商户','电商服务点','工农商企业'],
+  "pName": "单位实际控制人、股东、管理层变动",
+  "afamily": ['实际控制人','股东','管理层'],
   "pSuccess": [
-    {inclose:true, gname:"indType", p:'主营业务', t:"industrytype", apdclist:require('./apd1.js'), apdvalue:[0, 0, 0] },
-    {gname:"nick", p:'单位简称',t:"d2" },
-    {gname: "title", p: '单位简介', t: "d2"},
-    {gname: "desc", p: '单位描述', t: "p"},
-    {gname: "thumbnail", p: '图片简介', t: "thumb" },
-    {gname: "aGeoPoint", p: '选择地理位置', t: "chooseAd" },
+    {gname:"reportPeriod", p:'报告期',t:"rdate"},
     {gname: "address", p: '详细地址', t: "ed"},
     {gname: "licenseNumber", p:'社会信用代码', t: "h3" }
   ],
@@ -44,7 +40,7 @@ module.exports = [
   "pNo": 2,
   "pName": "资产负债表",
   "pSuccess": [
-    {gname:"reportPeriod", p:'报告期',t:"sq"},
+    {gname:"reportPeriod", p:'报告期',t:"rdate"},
     {gname:"a1 ", p:'流动资产',t:"d2" },
     {gname: "a2", p: '长期投资', t: "d2"},
     {gname: "a3", p: '固定资产', t: "d2"},
@@ -71,7 +67,7 @@ module.exports = [
 },
 {
   "pNo": 3,
-  "pName": "产品服务",
+  "pName": "单位评价",
   "afamily":['产品管理','服务管理'],
   "pSuccess": [
     {gname: "uName", p:'名称', t:"h3" },
