@@ -1,5 +1,5 @@
 //index.js
-const Parser= require('../../lib/xmldom/dom-parser')
+
 const app = getApp()
 
 Page({
@@ -17,10 +17,8 @@ Page({
   },
   onLoad: function () {
     var that = this;
-    var xbrl = require('../../model/xbrl').sjll;
-    let xParser = new Parser.DOMParser();
-    let vdoc = xParser.parseFromString(xbrl);
-    console.log(vdoc.getElemensByTagName('gl-cor:accountMainID '))
+
+
   },
   getUserInfo: function(e) {
     console.log(e)
